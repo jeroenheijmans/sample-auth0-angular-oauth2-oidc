@@ -390,7 +390,7 @@ Go to the "Grant Types" tab and note that the "Implicit" flow is checked (you co
 
 #### Creating the Resource (API)
 
-Go to [manage.auth0.com/#/apis](https://manage.auth0.com/#/apis) to creae an API.
+Go to [manage.auth0.com/#/apis](https://manage.auth0.com/#/apis) to create an API.
 Hit "Create API", name it "DemoApi", and give it an *Identifier*.
 As explained in the Auth0 UI, this should be a URI to identify your Resource API.
 For example, we used `https://auth0-demo-001.infi.nl`:
@@ -449,7 +449,7 @@ The client side logic calls for many other more advanced features, including:
 - Enabling session checks (push notifications from ID Servers about Single Sign Out)
 - External login providers ("log in with Google", etc.)
 - Cross-browser-tab (or window) notifications of events like sign out
-- Loading user profiles with additional idenity information
+- Loading user profiles with additional identity information
 - Preserving state (like target URL) before initializing Implicit Flow
 
 If you want to see how all these things work, you should go to [this example repository](https://github.com/jeroenheijmans/sample-angular-oauth2-oidc-with-auth-guards/).

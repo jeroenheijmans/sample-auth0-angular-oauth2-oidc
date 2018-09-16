@@ -129,4 +129,67 @@ In the next part we will start working on the actual code.
 
 ## Let's Code
 
-TODO
+In the previous part we discussed the OAuth2 Implicit Flow.
+But code is a more efficient way of communicating, don't you think?
+So let's get to it!
+
+### Prerequisites
+
+To follow along, you need these things:
+
+- Node (tested with 10.8.0) and NPM (tested with 6.3.0)
+- Angular CLI (tested with 6.1.5)
+- An IDE (VS Code is nice for Angular coding)
+- A shell (Powershell or Bash will do)
+
+In addition you will need an [Auth0](https://auth0.com/) account.
+You can create one now, or when we get to that part.
+
+### Angular setup
+
+Let's start with this:
+
+```bash
+ng new DemoApp --inline-style --inline-template --skip-tests --skip-git
+cd DemoApp
+ng serve --open
+```
+
+This should open a default, minimalistic Angular application.
+It leaves the console waiting for hot-reload requests.
+Next, open the `DemoApp` folder in your editor, and replace `app.component.ts` with this:
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `<h1>DemoApp</h1>
+    <p>You are logged in as {{username}}.</p>
+    <p>
+      <button (click)='login()'>Log in</button>
+      <button (click)='logout()'>Log out</button>
+      <button (click)='refresh()'>Refresh</button>
+    </p>
+    <p>Access Token</p><pre>{{token | json}}</pre>
+    <p>Claims</p><pre>{{claims | json}}</pre>
+  `,
+  styles: []
+})
+export class AppComponent {
+  username = 'TODO';
+  token = 'TODO';
+  claims = 'TODO';
+
+  constructor() { }
+
+  login() { }
+  logout() { }
+  refresh() { }
+}
+```
+
+Your app should look somewhat like this (if you steal some of [these styles](DemoApp/src/styles.css)):
+
+![initial app](scaffolded-app.png)
+

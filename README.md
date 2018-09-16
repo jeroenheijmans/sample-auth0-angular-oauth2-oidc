@@ -193,3 +193,18 @@ Your app should look somewhat like this (if you steal some of [these styles](Dem
 
 ![initial app](scaffolded-app.png)
 
+### Adding angular-oauth2-oidc
+
+TODO
+
+### Setting up Auth0
+
+TODO
+
+### Connecting the dots
+
+TODO
+
+## Conclusions
+
+TODO

@@ -80,7 +80,7 @@ In this post we won't touch on the API side of things.
 The beauty of OAuth2 is that the API side of things is largely *decoupled* from the rest.
 We will get to the point where access tokens are sent to a dummy API, and assume everything would work from there.
 
-There is one important note about the flow relevant though.
+There is one important note about the flow though.
 Tokens are passed plainly to the API by the client application.
 The format for such tokens is "JWT" (pronounced like "jot"), typically at least *signed* (JWS), or alternatively *encrypted* (JWE).
 Your API can verify (or decrypt) the tokens.
@@ -118,9 +118,9 @@ Let's put what we learned above in a picture:
 The two lines between Client and ID Server in this (simplified!) visualization *are* "the Flow".
 They determine how a Client can retrieve a token from the ID Server.
 
-Some specific things missing in the picture:
+Some specific things missing in the diagram are:
 
-- All log in screens happening when the user is at the ID Server. We use Auth0 in this series, so it's all taken care of for us.
+- All log in screens being served by the ID Server. We use Auth0 in this series, so it's all taken care of for us.
 - Third party logins, e.g. "Log in with Google". This would include a fourth box all the way to the left, but with Auth0 that only requires configuration, no coding on our part.
 - Silent refreshes: access tokens are short lived, so you need to get a fresh one every hour or so. Turns out that's just the normal flow in a hidden iframe, how it works is shown when we work on the code.
 

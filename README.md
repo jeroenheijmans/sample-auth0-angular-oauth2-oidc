@@ -29,14 +29,12 @@ If you already know how the Implicit Flow works, you can safely skip parts of th
 If code says more than words to you, or if you know how Auth0 works, you can safely skip the entire post, and go straight to part 2.
 For the rest of us, we'll start at the beginning.
 
-Let's get cracking!
-
 ## About the things involved
 
-Let's first get our terminology straight.
+We'll start by getting our terminology straight.
 What's what!?
 
-### About the Implicit Flow
+### The Implicit Flow
 
 OAuth2 and OpenID Connect are standards for how to authenticate and (to some degree) authorize users in your systems.
 It assumes this type of setup with three items:
@@ -56,12 +54,9 @@ The user sees login screens from the Id Server, but this should not be a big pro
 Oh, and this flow also quite naturally supports external Identity Providers (the "log in with Google/GitHub/etc" stuff).
 Which is very nice for users.
 
-This series focuses mainly on interaction between the **Identity Server** (Auth0) and an (Angular 6+) **Client**.
-Let's dive into the details about the moving parts.
-
 Footnote: read more about [the Implicit Flow in RFC 6749](https://tools.ietf.org/html/rfc6749#section-1.3.2).
 
-### About the Identity Server
+### The Identity Server
 
 You can of course create your own Identity Server.
 Security is hard though, so don't completely roll your own.
@@ -74,7 +69,7 @@ However, there are also SAAS solutions (sometimes called IDaaS) available.
 For example [Okta](https://www.okta.com/), [Keycloak](https://www.keycloak.org/), and [Auth0](https://auth0.com/).
 In this tutorial we use **Auth0** (a comparison is left for another time).
 
-### About the API
+### The API
 
 In this post we won't touch on the API side of things.
 The beauty of OAuth2 is that the API side of things is largely *decoupled* from the rest.
@@ -91,7 +86,7 @@ But you can also provide these keys out of band.
 
 Footnote: read more about [JSON Web Tokens (JWT) in RFC 7519](https://tools.ietf.org/html/rfc7519).
 
-### About the Client
+### The Client
 
 For OAuth2, a "Client" is an abstract concept.
 It can be a Single Page Web App, a mobile application, a traditional MVC Web App, or even another API.

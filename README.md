@@ -3,6 +3,10 @@
 This repository demonstrates how to connect your Angular 6 application to Auth0 using the implicit flow.
 It is the companion to a blog post written for [Infi](https://infi.nl).
 
+## ⚠️ Notice about updates
+
+Note that this repository is provided "as-is" and will most likely not receive any (security) updates.
+
 ## Disclaimers
 
 Let's get some disclaimers out of the way.
